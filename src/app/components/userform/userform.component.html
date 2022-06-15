@@ -1,0 +1,46 @@
+
+<div style="margin: 1%">
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+    <input type="text" [(ngModel)]="user.name" placeholder="Enter your name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+
+  <br>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+    <input type="text" [(ngModel)]="user.age" placeholder="Enter your age" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+
+  <br>
+
+  <div class="form-check">
+    <input class="form-check-input" [(ngModel)]="user.Gender" value="Male" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+    <label class="form-check-label" for="flexRadioDefault1">
+      Male
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" [(ngModel)]="user.Gender" value="Female"  type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+    <label class="form-check-label" for="flexRadioDefault2">
+      Female
+    </label>
+  </div>
+  <br>
+  <button type="button" (click)="save()" class="btn btn-success btn-lg">Submit</button>
+  <br>
+  <br>
+  <ol class="list-group list-group-numbered">
+    <li class="list-group-item" *ngFor="let u of users; index as i">
+    <span>User name is : {{u.name}}</span>
+    <br>
+    <span>User age is : {{u.age}}</span>
+    <br>
+    <span>User gender is : {{u.Gender}}</span>
+    <br>
+    <button  style="margin:1%" type="button" (click)="deleteRow(u,i)" class="btn btn-danger">Delete User</button>
+</li>
+  </ol>
+
+
+</div>

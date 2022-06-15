@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'learnAngular';
+  title = 'Hello welcome to angular training';
+  name='SADIK'
+  user={
+    name:"",
+    age:""
+  }
+  save(){
+    console.log(this.user.name);
+    console.log(this.user.age);
+  }
 }
