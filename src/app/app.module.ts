@@ -5,13 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserformComponent } from './components/userform/userform.component';
 import {HttpClientModule} from '@angular/common/http';
-import { NavbarComponent } from './components/navbar/navbar.component'
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { AboutComponent } from './about/about.component';
+import { CounterComponent } from './components/counter/counter.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     UserformComponent,
-    NavbarComponent
+    NavbarComponent,
+    AboutComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,

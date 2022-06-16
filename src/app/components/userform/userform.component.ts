@@ -9,40 +9,44 @@ import { UserService } from 'src/app/user.service';
   styleUrls: ['./userform.component.css']
 })
 export class UserformComponent implements OnInit {
-  user:User=new User;
-  users:User[]=[];
+  user: User = new User;
+  users: User[] = [];
 
-  save(){
+  save() {
     // console.log(this.user.name);
     // console.log(this.user.age);
-     const observable= this.userService.createUser(this.user);
-     observable.subscribe(
-       (response:any)=>{
-         console.log(response);
-       },
-       function(error){
-         console.log(error);
-         alert("Something went wrong")
+    const observable = this.userService.createUser(this.user);
+    observable.subscribe(
+      (response: any) => {
+        console.log(response);
+      },
+      function (error) {
+        console.log(error);
+        alert("Something went wrong")
       }
-       
-     )
-
+    )
   }
 
-  deleteRow(user, index){
-     const observable=this.userService.deleteUser(user);
-     observable.subscribe((response :any)=>{
+  sort() {
+    this.users.sort(function (user1, user2) {
+      return user1.age - user2.age
+    })
+  }
+
+  deleteRow(user, index) {
+    const observable = this.userService.deleteUser(user);
+    observable.subscribe((response: any) => {
       console.log(response);
-      this.users.splice(index,1)
-     })
+      this.users.splice(index, 1)
+    })
   }
-  constructor(public userService:UserService) { }
-  
+  constructor(public userService: UserService) { }
+
   ngOnInit(): void {
     const promise = this.userService.getUser();
-    promise.subscribe((response)=>{
-     console.log(response);
-     this.users=response as User[];
+    promise.subscribe((response) => {
+      console.log(response);
+      this.users = response as User[];
     })
   }
 

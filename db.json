@@ -7,22 +7,16 @@
       "id": 1
     },
     {
-      "name": "Sadik",
-      "age": "29",
-      "Gender": "Male",
-      "id": 2
-    },
-    {
-      "name": "Sadan",
-      "age": "28",
-      "Gender": "Male",
-      "id": 3
-    },
-    {
       "name": "Aabid",
       "age": "8",
       "Gender": "Male",
       "id": 4
+    },
+    {
+      "name": "Sadan",
+      "age": "24",
+      "Gender": "Male",
+      "id": 5
     }
   ]
 }
