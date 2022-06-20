@@ -17,6 +17,12 @@
       "age": "24",
       "Gender": "Male",
       "id": 5
+    },
+    {
+      "name": "Saratullah",
+      "age": "29",
+      "Gender": "Male",
+      "id": 6
     }
   ]
 }

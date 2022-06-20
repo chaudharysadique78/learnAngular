@@ -7,7 +7,8 @@ import { UserformComponent } from './components/userform/userform.component';
 import {HttpClientModule} from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
-import { CounterComponent } from './components/counter/counter.component'
+import { CounterComponent } from './components/counter/counter.component';
+import { EllipsisPipe } from './ellipsis.pipe'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CounterComponent } from './components/counter/counter.component'
     UserformComponent,
     NavbarComponent,
     AboutComponent,
-    CounterComponent
+    CounterComponent,
+    EllipsisPipe
   ],
   imports: [
     BrowserModule,
