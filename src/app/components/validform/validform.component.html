@@ -1,0 +1,19 @@
+<div class="container">
+    <h1 class="text-center">Form</h1>
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+        <div class="mb-3 row">
+            <label>Email</label>
+            <div class="col-sm-6">
+                <input required #email="ngModel" ngModel type="email"  class="form-control" name="username" placeholder="enter your emai">
+            <span *ngIf="email.invalid && email.touched" class="error" >Email field is required</span>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label>Password</label>
+            <div class="col-sm-6">
+                <input type="password" ngModel class="form-control" name="password">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-info">Submit</button>
+    </form>
+</div>

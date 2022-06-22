@@ -8,7 +8,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { CounterComponent } from './components/counter/counter.component';
-import { EllipsisPipe } from './ellipsis.pipe'
+import { EllipsisPipe } from './ellipsis.pipe';
+import { ValidformComponent } from './components/validform/validform.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { EllipsisPipe } from './ellipsis.pipe'
     NavbarComponent,
     AboutComponent,
     CounterComponent,
-    EllipsisPipe
+    EllipsisPipe,
+    ValidformComponent,
   ],
   imports: [
     BrowserModule,
